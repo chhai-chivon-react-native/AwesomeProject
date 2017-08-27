@@ -6,13 +6,23 @@
 
 import React, { Component } from 'react';
 import { AppRegistry, StyleSheet, Text, View } from 'react-native';
-import App  from './app/containers/app';
+
+// Redux
+import { Provider } from 'react-redux'
+import store from './app/components/store'
+// Navigation
+import TabBarNavigation from './app/components/tabBar/views/TabBarNavigation'
+
+import App  from './app/containers/test';
 export default class AwesomeProject extends Component {
   render() {
     return (
-      <View style={styles.container}>
-            <App />
-      </View>
+        <View>
+            {/*<Provider store={store}>
+              <TabBarNavigation />
+            </Provider>*/}
+            <Text>Hello World</Text>
+        </View>
     );
   }
 }
